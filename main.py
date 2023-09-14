@@ -12,11 +12,16 @@ async def homepage(request):
 async def about(requests):
     return JSONResponse({"message": "rorange"})
 
+
+async def contact(requests):
+    return JSONResponse({"Work Email": "eiwdjwbcjhjwnkxnqw"})
+
 app = Starlette(
     debug=True,
     routes=[
         Route("/", homepage),
-        Route("/about", about)
+        Route("/about", about),
+        Route("/contact", contact)
     ]
 )
 
